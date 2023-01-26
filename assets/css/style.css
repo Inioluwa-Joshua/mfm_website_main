@@ -33,9 +33,13 @@ ul .hover:hover{
     .custom-nav-btn{
         display: none;
     }
+    header .navbar .container{
+        justify-content: start;
+    }
   }
   @media screen and (max-width: 1000px) {
     .custom-collapse{
         display: none;
     }
+    
   }
