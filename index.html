@@ -1,79 +1,32 @@
 
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Cover Template · Bootstrap v5.0</title>
+    <title>MFM REGION-38</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
     
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
 
-
-    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
     <!-- Bootstrap core CSS -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-      .btn{
-        --bs-btn-focus-box-shadow:none;
-      }
-      .btn:focus{
-        box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
-        /* box-shadow: none; */
-        /* --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5); */
-      }
-      .customBtn{
-        box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
-      }
-      .customBtn:active{
-        box-shadow: none;
-       
-      }
-      .nav-link{
-        color: white;
-        font-weight: 500;
-      }
-      .nav-link:hover{
-        color: crimson;
-      }
-      .nav-link:active{
-        color: crimson;
-        opacity: 0.7;
-      }
-      .nav-link:focus{
-        color: rgb(145, 145, 145);
-        opacity: 0.9;
-      }
-      .active{
-        border-bottom: 1px solid white;
-      }
-      .navBtn{
-        background-color:crimson;
-        color: white;
-        border: none;
-      }
-      .navBtn:hover{
-        background-color: rgb(240, 25, 68);
-      }
-      .navBtn:active{
-        background-color: crimson;
-        opacity: 0.7;
-        border: none;
-      }
-      .navBtn:focus{
-        background-color: crimson;
-        opacity: 0.7;
-        border: none;
-      }
-      .brandNameMI{
-        color: crimson;
-      }
-    .cover-container {
-        max-width: 42em;
-    }
+        .modal-ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        .modal-ul li{
+            color:red;
+            text-decoration: none;
+        }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -81,84 +34,302 @@
         -moz-user-select: none;
         user-select: none;
       }
-
-    .animated {
-      animation: up-down 2s ease-in-out infinite alternate-reverse both;
-    }
+      .navbar-popup{
+        display: flex;
+        position: fixed;
+        z-index: 9999;
+      }
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
-    @keyframes up-down {
-      0% {
-        transform: translateY(5px);
+      nav .container .logo{
+        width: 30%;
       }
-      100% {
-        transform: translateY(-5px);
-      }
-    }
-    
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
-    
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="mb-auto">
-              <div class="row">
-                <div class="col-lg-2 col-md-2" >
-                  <h3 
-                    class="animated 
-                    float-md-start mb-0"
-                  >
-                    Code<span class="brandNameMI">MI</span>
-                  </h3>
-                </div>
-                
-                <div class="col-lg-6 col-md-6 col-sm-12 gx-4">
-                  <nav class="nav nav-masthead justify-content-center float-end-md">
-                    <a class="col-md-3 nav-link active" aria-current="page" href="/home.html">Home</a>
-                    <a class="col-md-3 nav-link" href="#">Features</a>
-                    <a class="col-md-3 nav-link" href="#">Contact</a>                  
-                  </nav>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <button class=" mx-2 navBtn btn">Join Our Community</button>
-                </div>
-              </div>
-            </header>
-            
-            <main class="px-3">
-                <h1 
-                  
-                >
-                  Code<span class="brandNameMI">MI</span>
-                </h1>
-                <p class="lead">CodeMI the home of coders and developers</p>
-                <p class="lead">
-                <a href="#" class="btn customBtn btn-lg btn-secondary fw-bold border-white bg-dark">Learn more</a>
-                </p>
-            </main>
-
-            <footer class="mt-auto text-white-50">
-              <p>&copy Copyright 2022 CodeMI <span style="font-size:20px; color:rgb(99, 187, 247);">.</span> "Designed by" <a href="https://getbootstrap.com/" class="text-white">Joshua(J-Techs)</a></p>
-            </footer>
+  <body>
+    <style>
+      .bg-navBg{
+        background-color: #29044b;
+      }
+      .navbar .container .logo{
+        width: 25%;
+        border-radius: 50%;
+      }
+    </style>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top h-3">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="assets/img/mfm-logo.png" alt="" class="logo"></a>
+        <button type="button" class="navbar-toggler " data-bs-toggle="modal" data-bs-target="#exampleModal4">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 text-uppercase">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Who we are</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">media resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">online giving</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/quicklink.html">quick links</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
         </div>
+      </div>
+    </nav>
+  </header>
 
-        <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 
-    <script src="assets/vendor/aos/aos.js"></script>
+   
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <ul class="modal-ul row text-uppercase">
+            <li class="col-12">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="col-12">
+              <a class="nav-link" href="#">Who we are</a>
+            </li>
+            <li class="col-12">
+              <a class="nav-link" href="#">media resources</a>
+            </li>
+            <li class="col-12">
+              <a class="nav-link" href="#">online giving</a>
+            </li>
+            <li class="col-12">
+              <a class="nav-link" href="#">quick links</a>
+            </li>
+          </ul>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="" height="100%" src="assets/img/hero-bg.jpg" aria-hidden="true" />
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Mountain of Fire and Miracle Ministries</h1>
+            <p>Region-38 TMPM Chika</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Worship With Us</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="" height="100" src="assets/img/worship-1.jpg" aria-hidden="true" />
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Surely The Lord Is In This Place</h1>
+            <p>Region-38</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Find us on map</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="" height="100%" src="assets/img/hero-bg.jpg" aria-hidden="true" />
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>MFM TENT MAKERS PASTORIAL MINISTRY</h1>
+            <p></p>
+            <p><a class="btn btn-lg btn-primary" href="#">Church Tour</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row justify-content-around px-4">
+      <div class="col-lg-4 col-md-5 col-sm-6">
+        <div class="card bg-dark text-white border border-none ">
+          <a href="#"><img class="img-fluid rounded" src="assets/img/Online-Giving-1.jpg"/></a>
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 col-md-5 col-sm-6">
+        <div class="card bg-dark text-white border border-none">
+          <a href="#"><img class="img-fluid w-100 rounded"  src="assets/img/worship-1.jpg"/></a>
+          <div class="card-img-overlay">
+            <div class="col-10 align-items-center">
+              <h4 class="text-white" style="background-color: rgba(37, 37, 37, 0.8);">WATCH MFM EVENTS LIFE HERE</h4>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 col-md-5 col-sm-5">
+        <div class="card bg-dark text-white border border-none">
+          <a href="#"><img class="img-fluid w-100 rounded"  src="assets/img/water-wave.jpg"/></a>
+          <div class="card-img-overlay">
+            <div class="col-5 h-100 d-flex align-items-center">
+              <h4 class="text-white t-2" style="background-color: rgba(37, 37, 37, 0.8);">MANNER WATER </h4>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- Three columns of text below the carousel -->
+    <!-- <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Heading</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+    </div> -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div>
+  
+  <!-- /.container -->
+
+  <!-- FOOTER -->
+  <footer class="container py-4">
+    <div class="col-12 d-flex align-items-center justify-content-center py-4">
+      <div class="col-lg-1 col-md-1">
+        <img src="assets/img/mfm-logo.png" alt="" class="" width="50" style="margin-left: 10px;">
+      </div>
+      <div class="col-lg-4 col-md-12 mx-3">
+        <h4>MOUNTAIN OF FIRE</h4>
+      </div>
+    </div>
+    <!-- <p class="float-end"><a href="#">Back to top</a></p> -->
+    <div class="col-12 px-4">
+      <p class="" style="font-size: smaller;">&copy; Copyright MFM REGION-38 2023. All Right Reserved &middot; Designed and Developed by <a href="#">CodeMI-Websites</a></p>
+    </div>
+  </footer>
+</main>
+
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/fade-on-scrow.js"></script>
     <script>
-        AOS.init({
-            once:true
-        });
-        
-    </script>
+        var exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+  // Button that triggered the modal
+  var button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  var recipient = button.getAttribute('data-bs-whatever')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+  // Update the modal's content.
+  var modalTitle = exampleModal.querySelector('.modal-title')
+  var modalBodyInput = exampleModal.querySelector('.modal-body input')
 
-        
+  modalTitle.textContent = 'New message to ' + recipient
+  modalBodyInput.value = recipient
+})
+    
+    </script>
+      
   </body>
 </html>
