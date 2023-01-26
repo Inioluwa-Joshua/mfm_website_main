@@ -1,0 +1,14 @@
+ul .hover:hover{
+    background-color: #300757;
+    color: #ffffff;
+  }
+  .custom-btn{
+    border: none;
+    background-color: #696969;
+    padding: 15px;
+    border-radius: 10%;
+    color: #ffffff;
+  }
+  .custom-btn:hover{
+    background-color: #300757;
+  }
