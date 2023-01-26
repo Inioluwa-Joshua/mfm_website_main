@@ -12,3 +12,30 @@ ul .hover:hover{
   .custom-btn:hover{
     background-color: #300757;
   }
+  .custom-nav-btn{
+    border: none;
+    background-color: rgba(48, 7, 87,0.7);
+    padding: 5px 15px;
+    border-radius: 10%;
+    color: #ffffff;
+  }
+  .custom-nav-btn:hover{
+    background-color: #300757;
+  }
+  .bg-navBg{
+    background-color: #29044b;
+  }
+  .navbar .container .logo{
+    width: 25%;
+    border-radius: 50%;
+  }
+  @media screen and (min-width: 1000px) {
+    .custom-nav-btn{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .custom-collapse{
+        display: none;
+    }
+  }
