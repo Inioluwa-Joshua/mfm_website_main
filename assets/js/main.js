@@ -4,6 +4,13 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+var expandbtn = document.querySelector("#showbtn");
+
+
+expandbtn.addEventListener('click', function() {
+    document.querySelector("#show").style.display = "block";
+})
+
 (function() {
   "use strict";
 
